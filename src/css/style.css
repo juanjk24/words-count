@@ -46,15 +46,16 @@ textarea {
   font-family: monospace;
   font-size: larger;
   border-radius: 10px;
-  background-color: #444;
+  background-color: #444;  
 }
 
 aside {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 300px;
   height: 451px;
-  padding: 14px;
+  padding: 12px;
   background-color: #444;
   color: #fff;
   text-align: center;
@@ -63,7 +64,7 @@ aside {
   .words-count-container {
     width: 100%;
     height: auto;
-    padding: 6px;
+    padding: 6px 12px;
     display: flex;
     align-items: center;
     font-size: larger;
@@ -83,6 +84,27 @@ aside {
 
     &:hover {
       background-color: #555;
+    }
+  }
+
+  footer {
+    display: flex;
+    gap: 10px;
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: #555;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #666;
+      }
     }
   }
 }

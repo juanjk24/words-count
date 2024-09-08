@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.0.8"
+    "vite": "5.0.8"
+  },
+  "dependencies": {
+    "notyf": "3.10.0"
   }
 }
