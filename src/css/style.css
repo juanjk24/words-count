@@ -46,7 +46,16 @@ textarea {
   font-family: monospace;
   font-size: larger;
   border-radius: 10px;
-  background-color: #444;  
+  background-color: #444;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 20px;
+  }
 }
 
 aside {
