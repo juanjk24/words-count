@@ -1,40 +1,67 @@
-import './css/style.css'
-import './css/responsive.css'
+import "./css/style.css"
+import "./css/responsive.css"
 
-import { textarea, domElementsCount } from './utils/domElements.js'
+import { textarea, domElementsCount } from "./utils/domElements.js"
 import "./copyText.js"
 import "./deleteText.js"
 
-const [wordsCount, lettersCount, spacesCount, uppercaseCount, lowercaseCount, charactersCount] = domElementsCount
+const [
+  wordsCount,
+  lettersCount,
+  spacesCount,
+  uppercaseCount,
+  lowercaseCount,
+  numbersCount,
+  charactersCount,
+] = domElementsCount
 
-textarea.addEventListener('input', () => {
-    const text = textarea.value
+let filteredText = ""
 
-    // Split the text into words
-    const words = text.split(' ')
-    const word = words.filter(word => word !== '').length
+function filterSpecialCharacter(textToFilter) {
+  let specialCharacter = /[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g
+  return textToFilter.replace(specialCharacter, "")
+}
 
-    // Split the text into letters
-    const letters = text.split('')
-    const letterWithoutSpace = letters.filter(letter => letter !== ' ')
-    const letter = letterWithoutSpace.length
+textarea.addEventListener("input", () => {
+  const text = textarea.value
+  console.log(text)
 
-    // Count the spaces
-    const space = text.split(' ').length - 1
+  // Filter out special characters and numbers from the text
+  filteredText = filterSpecialCharacter(text)
 
-    // Count the uppercase letters
-    const uppercase = letterWithoutSpace.filter(letter => letter === letter.toUpperCase()).length
+  // Split the filtered text into words
+  const words = filteredText.split(" ")
+  const word = words.filter((word) => word !== "").length
 
-    // Count the lowercase letters
-    const lowercase = letterWithoutSpace.filter(letter => letter === letter.toLowerCase()).length
+  // Split the filtered text into letters
+  const letters = filteredText.split("")
+  const letterWithoutSpace = letters.filter((letter) => letter !== " ")
+  const letter = letterWithoutSpace.length
 
-    // Count the characters
-    const characters = text.length
+  // Count the spaces
+  const space = filteredText.split(" ").length - 1
 
-    wordsCount.textContent = word
-    lettersCount.textContent = letter
-    spacesCount.textContent = space
-    uppercaseCount.textContent = uppercase
-    lowercaseCount.textContent = lowercase
-    charactersCount.textContent = characters
+  // Count the uppercase letters
+  const uppercase = letterWithoutSpace.filter(
+    (letter) => letter === letter.toUpperCase()
+  ).length
+
+  // Count the lowercase letters
+  const lowercase = letterWithoutSpace.filter(
+    (letter) => letter === letter.toLowerCase()
+  ).length
+
+  // Count the numbers
+  const numbers = text.replace(/[^0-9]/g, "").length
+
+  // Count the characters
+  const characters = text.length
+
+  wordsCount.textContent = word
+  lettersCount.textContent = letter
+  spacesCount.textContent = space
+  uppercaseCount.textContent = uppercase
+  lowercaseCount.textContent = lowercase
+  numbersCount.textContent = numbers
+  charactersCount.textContent = characters
 })
