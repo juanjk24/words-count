@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador de palabras - letras - espacios</title>
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <header>
+          <img src="/favicon.svg" alt="Icono de la letra 'C'">
+          <h1>Contador de palabras</h1>
+        </header>
+        
+        <textarea name="input-text" id="input-text" placeholder="Introduce aquí tu texto..." maxlength="5000"></textarea>
+      </main>
+
+      <aside>
+        <div class="words-count-container">
+          <h2>Palabras: </h2>
+          <span id="words-count"></span>
+        </div>
+
+        <div class="words-count-container">
+          <h2>Letras: </h2>
+          <span id="letters-count"></span>
+        </div>
+
+        <div class="words-count-container">
+          <h2>Espacios: </h2>
+          <span id="spaces-count"></span>
+        </div>
+      </aside>
+
+    </div>
+  </body>
+</html>
