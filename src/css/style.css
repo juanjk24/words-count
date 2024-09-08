@@ -45,7 +45,7 @@ textarea {
   resize: none;
   font-family: monospace;
   font-size: larger;
-  border-radius: 10px;
+  border-radius: 22px;
   background-color: #444;
 
   &::-webkit-scrollbar {
