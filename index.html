@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contador de palabras - letras - espacios</title>
+    <title>Contador de palabras - letras - espacios gratis</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <script type="module" src="./src/main.js"></script>
+
+    <!-- SEO meta tags -->
+    <meta name="description" content="Contador de palabras, letras y espacios gratis">
+    <meta name="keywords" content="contador, palabras, letras, espacios, gratis">
+    <meta name="author" content="Juan Cuellar">
   </head>
   <body>
     <div id="app">
@@ -19,20 +26,32 @@
       </main>
 
       <aside>
-        <div class="words-count-container">
-          <h2>Palabras: </h2>
-          <span id="words-count"></span>
-        </div>
+        <header>
+          <div class="words-count-container">
+            <h2>Palabras: </h2>
+            <span id="words-count"></span>
+          </div>
+  
+          <div class="words-count-container">
+            <h2>Letras: </h2>
+            <span id="letters-count"></span>
+          </div>
+  
+          <div class="words-count-container">
+            <h2>Espacios: </h2>
+            <span id="spaces-count"></span>
+          </div>
+        </header>
 
-        <div class="words-count-container">
-          <h2>Letras: </h2>
-          <span id="letters-count"></span>
-        </div>
+        <footer>
+          <button id="copy-text-button">
+            <img src="/copy.svg" alt="">
+          </button>
 
-        <div class="words-count-container">
-          <h2>Espacios: </h2>
-          <span id="spaces-count"></span>
-        </div>
+          <button id="delete-text-button">
+            <img src="/delete.svg" alt="">
+          </button>
+        </footer>
       </aside>
 
     </div>

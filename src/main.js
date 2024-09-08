@@ -1,6 +1,10 @@
 import './css/style.css'
+import './css/responsive.css'
 
 import { $ } from './utils/selector.js'
+
+import "./copyText.js"
+import "./deleteText.js"
 
 const textarea = $('#input-text')
 const wordsCount = $('#words-count')
@@ -25,4 +29,3 @@ textarea.addEventListener('input', () => {
     lettersCount.textContent = letter
     spacesCount.textContent = space
 })
-
