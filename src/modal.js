@@ -1,8 +1,12 @@
-import { modal, deleteButton, cancelButton, confirmDeleteButton } from './utils/domElements.js'
+import { textarea, modal, deleteButton, cancelButton, confirmDeleteButton } from './utils/domElements.js'
 import { deleteText } from './deleteText.js'
 
 
 deleteButton.addEventListener('click', () => {
+    if (!textarea.value) {
+        return
+    }
+
     modal.style.display = 'flex'
 
     cancelButton.addEventListener('click', () => {
