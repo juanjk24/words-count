@@ -1,8 +1,11 @@
-import { domElementsCount, textarea, deleteButton } from './utils/domElements.js'
+import {
+  domElementsCount,
+  textarea,
+} from "./utils/domElements.js"
 
-deleteButton.addEventListener('click', () => {
-    if (!textarea.value) return
+export function deleteText() {
+  if (!textarea.value) return
 
-    textarea.value = ''
-    domElementsCount.forEach(element => element.textContent = '')
-})
+  textarea.value = ""
+  domElementsCount.forEach((element) => (element.textContent = ""))
+}

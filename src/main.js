@@ -1,9 +1,10 @@
 import "./css/style.css"
 import "./css/responsive.css"
+import "./css/modal.css"
 
 import { textarea, domElementsCount } from "./utils/domElements.js"
 import "./copyText.js"
-import "./deleteText.js"
+import "./modal.js"
 
 const [
   wordsCount,
@@ -24,7 +25,6 @@ function filterSpecialCharacter(textToFilter) {
 
 textarea.addEventListener("input", () => {
   const text = textarea.value
-  console.log(text)
 
   // Filter out special characters and numbers from the text
   filteredText = filterSpecialCharacter(text)

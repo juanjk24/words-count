@@ -2,6 +2,9 @@ import { $ } from './selector.js'
 
 export const textarea = $('#input-text')
 export const deleteButton = $('#delete-text-button')
+export const confirmDeleteButton = $('#confirm-delete-button')
+export const cancelButton = $('#cancel-button')
+export const modal = $('#modal')
 
 const wordsCount = $('#words-count')
 const lettersCount = $('#letters-count')
