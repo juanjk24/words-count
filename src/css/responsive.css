@@ -2,7 +2,7 @@
 
 @media (max-width: 768px) {
   #app {
-    height: auto;
+    height: auto !important;
     flex-direction: column;
   }
 

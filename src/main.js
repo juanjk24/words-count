@@ -1,8 +1,3 @@
-import "./css/style.css"
-import "./css/responsive.css"
-import "./css/modal.css"
-import "./css/tooltip.css"
-
 import { textarea, domElementsCount } from "./utils/domElements.js"
 import "./copyText.js"
 import "./modal.js"
