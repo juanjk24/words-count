@@ -67,6 +67,7 @@ textarea {
   border: none;
   outline: none;
   padding: 0 8px 0 0;
+  overflow: auto;
 
   &::-webkit-scrollbar {
     width: 8px;
