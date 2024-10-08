@@ -8,13 +8,16 @@ deleteButton.addEventListener('click', () => {
     }
 
     modal.style.display = 'flex'
+    modal.showModal()
 
     cancelButton.addEventListener('click', () => {
         modal.style.display = 'none'
+        modal.close()
     })
 
     confirmDeleteButton.addEventListener('click', () => {
         deleteText()
         modal.style.display = 'none'
+        modal.close()
     })
 })

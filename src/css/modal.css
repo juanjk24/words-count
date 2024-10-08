@@ -1,5 +1,4 @@
 #modal {
-  position: absolute;
   width: 300px;
   height: 200px;
   background-color: #333;
@@ -10,22 +9,17 @@
   justify-content: space-between;
   padding: 22px;
   border-radius: 32px;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   font-family: monospace;
   overflow: hidden;
-  display: none;
 
   footer {
     display: flex;
     justify-content: space-between;
     width: 100%;
     gap: 10px;
-
-    hr {
-      width: 300px;
-    }
 
     button {
       width: 100%;
