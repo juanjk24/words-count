@@ -7,17 +7,17 @@ deleteButton.addEventListener('click', () => {
         return
     }
 
-    modal.style.display = 'flex'
+    //modal.style.display = 'flex'
     modal.showModal()
 
     cancelButton.addEventListener('click', () => {
-        modal.style.display = 'none'
+        //modal.style.display = 'none'
         modal.close()
     })
 
     confirmDeleteButton.addEventListener('click', () => {
         deleteText()
-        modal.style.display = 'none'
+        //modal.style.display = 'none'
         modal.close()
     })
 })
